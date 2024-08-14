@@ -1,5 +1,5 @@
 {
-  "name": "CordovaIngenicoSdk",
+  "name": "com.everbluepartners.cordovaingenicosdk",
   "version": "1.0.0",
   "description": "Plugin built to use ingenico native android sdk in a cordova app",
   "cordova": {
