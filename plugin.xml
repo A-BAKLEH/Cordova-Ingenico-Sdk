@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.everbluepartners.cordovaingenicosdk" version="1.0.0"
+	xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>CordovaIngenicoSdk</name>
+	<js-module name="CordovaIngenicoSdk" src="www/CordovaIngenicoSdk.js">
+		<clobbers target="cordova.plugins.CordovaIngenicoSdk" />
+	</js-module>
+	<platform name="android">
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="CordovaIngenicoSdk">
+				<param name="android-package" value="com.everbluepartners.cordovaingenicosdk.CordovaIngenicoSdk" />
+			</feature>
+		</config-file>
+		<config-file parent="/*" target="AndroidManifest.xml"></config-file>
+		<resource-file src="src/android/logo.bmp" target="assets/logo.bmp" />
+		<resource-file src="src/android/logo_ingenico.bmp" target="assets/logo_ingenico.bmp" />
+		<source-file src="src/android/utils/Util.java" target-dir="src/com/everbluepartners/cordovaingenicosdk/CordovaIngenicoSdk/utils" />
+		<source-file src="src/android/CordovaIngenicoSdk.java" target-dir="src/com/everbluepartners/cordovaingenicosdk/CordovaIngenicoSdk" />
+		<source-file src="src/android/DeviceHelper.java" target-dir="src/com/everbluepartners/cordovaingenicosdk/CordovaIngenicoSdk" />
+        <lib-file src="libs/usdk_api_aidl_v13.7.0.20221110.jar" target-dir="libs" />
+        <!-- <framework src="libs/usdk_api_aidl_v13.7.0.20221110.jar" custom="true" /> -->
+	</platform>
+</plugin>
